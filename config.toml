@@ -149,7 +149,7 @@ reporting-disabled = false
 [admin]
   enabled = true
   bind-address = ":8083"
-  https-enabled = false
+  https-enabled = true
   https-certificate = "/etc/ssl/influxdb.pem"
 
 ###
@@ -166,7 +166,7 @@ reporting-disabled = false
   log-enabled = true
   write-tracing = false
   pprof-enabled = false
-  https-enabled = false
+  https-enabled = true
   https-certificate = "/etc/ssl/influxdb.pem"
   max-row-limit = 10000
 
