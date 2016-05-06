@@ -6,9 +6,13 @@ RUN wget https://dl.influxdata.com/influxdb/releases/influxdb_${VERSION}_amd64.d
     && dpkg -i influxdb_${VERSION}_amd64.deb \
     && rm influxdb_${VERSION}_amd64.deb
 
+COPY config.toml /config.toml
+
 # Admin server WebUI
 EXPOSE 8083
 # HTTP API
 EXPOSE 8086 
 
-CMD ["influxd"]
+VOLUME ["/data"]
+
+CMD ["influxd", "-config", "/config.toml"]
