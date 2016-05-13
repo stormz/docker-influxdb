@@ -1,6 +1,6 @@
 from buildpack-deps:jessie-curl
 
-ENV VERSION 0.12.2-1
+ENV VERSION 0.13.0
 
 RUN wget https://dl.influxdata.com/influxdb/releases/influxdb_${VERSION}_amd64.deb \
     && dpkg -i influxdb_${VERSION}_amd64.deb \
